@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './App.module.css';
 import User from './User';
+import ToDoList from './ToDoList';
 
 
 function App() {
@@ -16,19 +17,27 @@ function App() {
   
     const  [age, setAge]=useState(0)
     const  [text, setText]=useState("")
+    const  [visible, setVisible]=useState(true)
     
 
     const increace = ()=>{
       setAge(age+1)
-        
-       // setAge(age)
-        console.log(age)
+    }
+    const Decreace = ()=>{
+      setAge(age-1)
+    }
+    const setToZero = ()=>{
+      setAge(0)
     }
 
     const typeText =(e)=>{
       setText(e.target.value)
       console.log(e.target.value)
     }
+
+    // const Visible =()=>{
+    //   setVisible(!visible)
+    // }
   
   return (
     <div className={styles.App1}>
@@ -36,6 +45,12 @@ function App() {
       <p>{text}</p>
       {age}
       <button onClick={increace}>Increace age</button>
+      <button onClick={Decreace}>Decreace age</button>
+      <button onClick={setToZero}>Set to zero</button>
+      <br/>
+      <br/>
+      <button onClick={()=>setVisible(!visible)}>Show/Hide</button>
+      {visible && <p>"HI MY NAME IS DIMA"</p>}
 
       <br></br>
       <br></br>
@@ -56,12 +71,10 @@ function App() {
 
 
       
+      <ToDoList/>
 
 
-
-      {/* <Job sarary={900} position="Senior SDE" company="Amazon"/>
-      <Job sarary={1200} position="Junior SDE" company="Google"/>
-      <Job sarary={1000} position="Project Manager" company="Netflix"/> */}
+      
     </div>
     
     
