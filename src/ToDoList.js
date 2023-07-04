@@ -13,8 +13,10 @@ const ToDoList = () => {
     
     const addTask = () => {
         const task = {
-            id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
+            // id: todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1,
+            id: todoList.length  + 1,
             taskName: newTask,
+            completed: false,
         }
         setTodoList([...todoList, task])
     }
@@ -35,6 +37,18 @@ const ToDoList = () => {
         //setTodoList(newTodoList)
     }
 
+    // const completeTask = (id) =>{
+    //     setTodoList(
+    //         todoList.map((task) =>{
+    //             if(task.id===id){
+    //                 return { ...task, completed: true}
+    //             }else{
+    //                 return task
+    //             }
+    //         })
+    //     )
+    // }
+
     return (
         <div>
              <div className={styles.addTask}>{/*  */}
@@ -42,12 +56,15 @@ const ToDoList = () => {
                 <button onClick={addTask}>Add Task</button>
             </div>
              <div className={styles.list}>
-                {todoList.map((task, key)=>{
+                {todoList.map((task, index)=>{
                     return(
                         <Task taskName={task.taskName}
-                              id={task.id}
-                              key={key}
+                            //   id={task.id}
+                            id={task.id}
+                              key={index}
+                              completed={task.completed}
                               deleteTask={deleteTask}
+                            //   completeTask={completeTask}
                               />
                     
                     )
