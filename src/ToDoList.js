@@ -5,7 +5,8 @@ import Task from './Task';
 const ToDoList = () => {
 
     const [todoList, setTodoList] = useState([])
-    const [newTask, setNewTask] = useState("") 
+    const [newTask, setNewTask] = useState("")
+     
     
     const handleChange = (e)=>{
         setNewTask(e.target.value)
@@ -59,11 +60,10 @@ const ToDoList = () => {
                 {todoList.map((task, index)=>{
                     return(
                         <Task taskName={task.taskName}
-                            //   id={task.id}
                             id={task.id}
-                              key={index}
-                              completed={task.completed}
-                              deleteTask={deleteTask}
+                            key={index}
+                            completed={task.completed}
+                            deleteTask={deleteTask}
                             //   completeTask={completeTask}
                               />
                     

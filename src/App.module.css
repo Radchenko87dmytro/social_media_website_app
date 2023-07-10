@@ -22,8 +22,9 @@
 }
 
 .addTask{
+  margin: 20px;
   background-color: blue;
-  padding: 50px;
+  padding: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,10 +35,23 @@
   margin: 10px;
 }
 
+.task1 button{
+  text-align: center;
+  margin: 10px;
+}
+
 .task{
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: greenyellow; */
-  
+  background-color: greenyellow;
+  margin: 20px;
+}
+
+.task1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  margin: 20px;
 }
