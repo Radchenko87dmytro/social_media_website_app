@@ -21,7 +21,7 @@ const ToDoList = () => {
         }
         setTodoList([...todoList, task])
     }
-    console.log(todoList);
+    //console.log(todoList);
     
     const deleteTask = (id)=>{
         setTodoList(todoList.filter((task) => task.id !== id))
