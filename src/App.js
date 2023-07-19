@@ -3,6 +3,8 @@ import styles from './App.module.css';
 import User from './User';
 import ToDoList from './ToDoList';
 import Axios from 'axios';
+import GenerateAnExcuse from './GenerateAnExcuse';
+import ReactRouterDom from './ReactRouterDom';
 
 
 function App() {
@@ -131,8 +133,15 @@ function App() {
       
       <ToDoList/>
 
+      <br></br>
+      <br></br>
 
+      <GenerateAnExcuse/>
+
+      <br></br>
+      <br></br>
       
+      <ReactRouterDom/>
     </div>
     
     
