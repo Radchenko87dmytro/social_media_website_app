@@ -19,7 +19,7 @@ function App() {
     ]
   
     const  [age, setAge]=useState(0)
-    const  [text, setText]=useState("")
+    
     const  [visible, setVisible]=useState(true)
 
     useEffect(()=>{
@@ -42,10 +42,7 @@ function App() {
       setAge(0)
     }
 
-    const typeText =(e)=>{
-      setText(e.target.value)
-      //console.log(e.target.value)
-    }
+    
 
     // fetch("https://catfact.ninja/fact")
     //   .then((res) => res.json())
@@ -77,6 +74,8 @@ function App() {
   return (
     <div className={styles.App1}>
 
+      <ReactRouterDom/>
+
       <button onClick={fetchCatFact}>Generate Cat Fact</button>
       <p>{catFact}</p>
       
@@ -97,9 +96,11 @@ function App() {
       <br/>
       <br/>
 
-      <input onChange={typeText}/>
-      <p>{text}</p>
+      
       {age}
+
+
+
       <button onClick={increace}>Increace age</button>
       <button onClick={Decreace}>Decreace age</button>
       <button onClick={setToZero}>Set to zero</button>
@@ -128,20 +129,8 @@ function App() {
 
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
       
-      <ToDoList/>
-
-      <br></br>
-      <br></br>
-
-      <GenerateAnExcuse/>
-
-      <br></br>
-      <br></br>
       
-      <ReactRouterDom/>
     </div>
     
     

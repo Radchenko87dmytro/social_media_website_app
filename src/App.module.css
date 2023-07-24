@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* flex-direction: column; */
   align-items: center;
 }
 
@@ -60,8 +60,40 @@
   color: red;
 }
 
+
+
 .RouterDom{
-  color: yellow;
+  color: yellowgreen;
   font-size: 30px;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  align-items: center;
+  align-items: start;
+}
+
+.nav{
+  /* padding: 5px 30px; */
+  /* display: grid; */
+  /* grid-column: 30%; */
   
 }
+ a{
+  background-color: darkgray;
+  color: white;
+  /* margin: 0px 30px; */
+  padding: 5px 30px;
+  /* display: block; */
+  display: flex;
+  text-decoration: none;
+    
+    /* &:active{
+      color: gold;
+    } */
+}
+
+.homeClass{
+  color: green;
+  /* display: block; */
+  margin-top: 30px;
+}
+
