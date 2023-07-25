@@ -18,29 +18,7 @@ function App() {
     {name: "Lukas", age: undefined},
     ]
   
-    const  [age, setAge]=useState(0)
-    
-    const  [visible, setVisible]=useState(true)
-
-    useEffect(()=>{
-      console.log("COMPONENT MOUNTED");
-
-      return () => {
-        console.log("COMPONENT UNMOUNTED");
-      }
-
-    }, [])
-    
-
-    const increace = ()=>{
-      setAge(age+1)
-    }
-    const Decreace = ()=>{
-      setAge(age-1)
-    }
-    const setToZero = ()=>{
-      setAge(0)
-    }
+   
 
     
 
@@ -50,17 +28,7 @@ function App() {
     //     console.log(data);
     //   })
 
-    const [catFact, setCatFact] = useState("")
-
-    const fetchCatFact = () => {
-      Axios.get("https://catfact.ninja/fact").then((res) => {
-      setCatFact(res.data.fact);
-    })
-    }
-
-    useEffect(() => {
-      fetchCatFact()
-    }, [])
+    
 
 
     const [predictedAge, setPredictedAge] = useState(null)
@@ -76,8 +44,7 @@ function App() {
 
       <ReactRouterDom/>
 
-      <button onClick={fetchCatFact}>Generate Cat Fact</button>
-      <p>{catFact}</p>
+      
       
       <br/>
       <br/>
@@ -97,18 +64,7 @@ function App() {
       <br/>
 
       
-      {age}
-
-
-
-      <button onClick={increace}>Increace age</button>
-      <button onClick={Decreace}>Decreace age</button>
-      <button onClick={setToZero}>Set to zero</button>
-      <br/>
-      <br/>
-
-      <button onClick={()=>setVisible(!visible)}>Show/Hide</button>
-      {visible && <p>"HI MY NAME IS DIMA"</p>}
+      
 
       <br></br>
       <br></br>
