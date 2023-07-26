@@ -13,7 +13,7 @@ const Home = () =>    {//props
     isLoading, 
     isError, 
     refetch,
-  } = useQuery(["cat"], ()=>{
+  } = useQuery(["cat"], async ()=>{
     return Axios.get("https://catfact.ninja/fact").then((res)=>res.data)
   })
 

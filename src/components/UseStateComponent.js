@@ -1,30 +1,31 @@
 import React from 'react'
 import { useState} from 'react'
+import useCount  from './useCount'
 
 const UseStateComponent = () => {
-  const  [age, setAge]=useState(0)
+  //const  [count, setCount]=useState(0)
+  const  {count, increace, decreace, restart} = useCount()
     
   const  [visible, setVisible]=useState(true)
 
   
-  
+  // const increace = ()=>{
+  //   setCount(count+1)
+  // }
+  // const decreace = ()=>{
+  //   setCount(count-1)
+  // }
+  // const restart = ()=>{
+  //   setCount(0)
+  // }
 
-  const increace = ()=>{
-    setAge(age+1)
-  }
-  const Decreace = ()=>{
-    setAge(age-1)
-  }
-  const setToZero = ()=>{
-    setAge(0)
-  }
   return (
     <div>
       
-      {age}
-      <button onClick={increace}>Increace age</button>
-      <button onClick={Decreace}>Decreace age</button>
-      <button onClick={setToZero}>Set to zero</button>
+      <p>{count}</p>
+      <button onClick={increace}>Increace count</button>
+      <button onClick={decreace}>Decreace count</button>
+      <button onClick={restart}>Restart</button>
       <br/>
       <br/>
 

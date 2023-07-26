@@ -6,6 +6,12 @@ const AxiosComponent = () => {
 
     const [catFact, setCatFact] = useState("")
 
+// fetch("https://catfact.ninja/fact")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     console.log(data);
+    //   })
+    
     const fetchCatFact = () => {
       Axios.get("https://catfact.ninja/fact").then((res) => {
       setCatFact(res.data.fact);

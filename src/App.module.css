@@ -91,6 +91,9 @@
       color: gold;
     } */
 }
+a :active{
+  color: gold;
+}
 
 .homeClass{
   color: green;

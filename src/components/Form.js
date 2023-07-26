@@ -12,7 +12,7 @@ const Form = () => {
         password: yup.string().min(4).max(20).required(),
         confirmPassword: yup
             .string()
-            .oneOf([yup.ref("password"), null])
+            .oneOf([yup.ref("password"), null], "Passwords Don't Match")
             .required(),
     })
 
@@ -30,7 +30,7 @@ const Form = () => {
     // }
 
   return (
-    
+    <div>
         <form onSubmit={handleSubmit(onSubmit)}>
             <input type='text' placeholder='Full Name...' {...register("fullName")}></input>
             <p>{errors.fullName?.message}</p>
@@ -44,7 +44,8 @@ const Form = () => {
             <p>{errors.confirmPassword?.message}</p>
             <input type='submit'></input>
         </form>
-    
+        {/* <p>{data}</p> */}
+    </div>
   )
 }
 

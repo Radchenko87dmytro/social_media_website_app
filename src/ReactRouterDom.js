@@ -11,6 +11,8 @@ import GenerateAnExcuse from './GenerateAnExcuse';
 import ToDoList from './ToDoList';
 import Form from './components/Form';
 import DynamicOutput from './components/DynamicOutput';
+import FetchingDataFromAPI from './components/FetchingDataFromAPI';
+import CustomHooks from './components/CustomHooks';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AxiosComponent from './components/AxiosComponent';
 
@@ -44,9 +46,12 @@ const ReactRouterDom = () => {
                 
                 <Route path="/DynamicOutput" element={<DynamicOutput/>}/>
                 <Route path="/AxiosComponent" element={<AxiosComponent/>}/>
+                <Route path="/FetchingDataFromAPI" element={<FetchingDataFromAPI/>}/>
                 <Route path="/anExcuse" element={<GenerateAnExcuse/>}/>
                 <Route path="/ToDoList" element={<ToDoList/>}/>
                 <Route path="/Form" element={<Form/>}/>
+                <Route path="/CustomHooks" element={<CustomHooks/>}/>
+                
                 <Route path="*" element={<h1>Page not found</h1>}/>
                 
                 
