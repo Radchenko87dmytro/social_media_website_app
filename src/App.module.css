@@ -67,7 +67,7 @@
   font-size: 30px;
   display: grid;
   grid-template-columns: 35% 65%;
-  align-items: center;
+  
   
 }
 
@@ -97,10 +97,15 @@ a :active{
 
 .homeClass{
   color: green;
+  align-items: center;
   /* display: block; */
   margin-top: 30px;
 }
 
 p{
   color: red;
+}
+
+.typeScript{
+  color: aqua;
 }

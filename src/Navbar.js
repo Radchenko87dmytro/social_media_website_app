@@ -18,6 +18,7 @@ const Navbar = () => {
             <Link to="/ToDoList">ToDoList</Link>
             <Link to="/Form">REACT-HOOK-FORM</Link>
             <Link to="/CustomHooks">CustomHooks</Link>
+            <Link to="/TypeScript_Safety">TypeScript_Safety</Link>
         </div>
     );
 };

@@ -7,12 +7,13 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Contact from './pages/Contact';
 import Navbar from './Navbar';
-import GenerateAnExcuse from './GenerateAnExcuse';
-import ToDoList from './ToDoList';
+import GenerateAnExcuse from './components/GenerateAnExcuse';
+import ToDoList from './components/ToDoList';
 import Form from './components/Form';
 import DynamicOutput from './components/DynamicOutput';
 import FetchingDataFromAPI from './components/FetchingDataFromAPI';
 import CustomHooks from './components/CustomHooks';
+import TypeScript_Safety from './components/TypeScript_Safety';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AxiosComponent from './components/AxiosComponent';
 
@@ -51,7 +52,7 @@ const ReactRouterDom = () => {
                 <Route path="/ToDoList" element={<ToDoList/>}/>
                 <Route path="/Form" element={<Form/>}/>
                 <Route path="/CustomHooks" element={<CustomHooks/>}/>
-                
+                <Route path="/TypeScript_Safety" element={<TypeScript_Safety/>}/>
                 <Route path="*" element={<h1>Page not found</h1>}/>
                 
                 

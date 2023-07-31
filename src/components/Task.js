@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styles from './App.module.css';
-import "./App.css"
+import styles from '../App.module.css';
+//import "./App.css"
 
 const Task = (props) => {
 
